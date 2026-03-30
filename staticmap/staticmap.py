@@ -177,7 +177,6 @@ def _simplify(points, tolerance=11):
 
     return new_coords
 
-
 class StaticMap:
     def __init__(self, width, height, padding_x=0, padding_y=0, url_template="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", tile_size=256, tile_request_timeout=None, headers={"User-Agent": "StaticMap"}, reverse_y=False, background_color="#fff",
                  delay_between_retries=0):
@@ -515,7 +514,6 @@ class StaticMap:
                 self._y_to_px(_lat_to_y(icon.coord[1], self.zoom)) - icon.offset[1]
             )
             image.paste(icon.img, position, icon.img)
-
 
 if __name__ == '__main__':
     map = StaticMap(300, 400, 10)
